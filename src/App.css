@@ -1,0 +1,285 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1f2937;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #2563eb;
+}
+
+.subtitulo {
+  margin: 0 0 32px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.lista-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card-produto {
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-produto {
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-produto h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.preco {
+  margin: 0 0 12px;
+  color: #15803d;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.categoria {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 5px 10px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mensagem {
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.mensagem-sucesso {
+  max-width: 500px;
+  margin: 20px 0;
+  text-align: center;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+  font-weight: 600;
+}
+
+.mensagem-erro {
+  max-width: 500px;
+  margin: 20px 0;
+  text-align: center;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.mensagem-pesquisa {
+  max-width: 500px;
+  margin: 20px 0;
+  text-align: center;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.erro {
+  max-width: 500px;
+  margin: 20px 0;
+  text-align: center;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 500px;
+  margin-bottom: 40px;
+  padding: 28px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.formulario h2 {
+  margin: 0 0 8px;
+  color: black;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background-color: #f9fafb;
+  color: #111827;
+  font-size: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.formulario input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.formulario button {
+  padding: 13px 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.formulario button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.card-produto button {
+  flex: 1;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.card-produto button:hover {
+  background-color: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.botoes-produto {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.card-produto .botao-editar {
+  background-color: #2563eb;
+}
+
+.card-produto .botao-editar:hover {
+  background-color: #1d4ed8;
+}
+
+.formulario .botao-cancelar {
+  background-color: #6b7280;
+}
+
+.formulario .botao-cancelar:hover {
+  background-color: #4b5563;
+}
+
+.erro-campo {
+  color: #dc2626;
+  font-size: 14px;
+  margin: -8px 0 4px;
+}
+
+.barra-pesquisa {
+  width: 100%;
+  max-width: 500px;
+  padding: 13px 16px;
+  margin: 20px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #111827;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.barra-pesquisa:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.container-pesquisa {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.icone-pesquisa {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+.container-pesquisa .barra-pesquisa {
+  margin: 20px 0;
+  padding-left: 44px;
+}
